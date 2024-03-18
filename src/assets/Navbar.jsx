@@ -15,7 +15,7 @@ function Navbar({ isLoggedIn, setIsLoggedIn }) {
   };
 
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-light">
+    <nav className="navbar navbar-expand-lg ">
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">Blog</Link>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -26,13 +26,16 @@ function Navbar({ isLoggedIn, setIsLoggedIn }) {
             <li className="nav-item">
               <Link className="nav-link" to="/home">Home</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/Feedback">Feedback</Link>
+            </li>
             {isLoggedIn ? (
               <li className="nav-item">
-                <button className="nav-link" onClick={handleLogout}>Logout</button>
+                <button className="nav-link" id='logout' onClick={handleLogout}>Logout</button>
               </li>
             ) : (
               <li className="nav-item">
-                <Link className="nav-link" to="/signin">Login</Link>
+                <Link className="nav-link" to="/">Login</Link>
               </li>
             )}
           </ul>

@@ -23,7 +23,7 @@ body {
   background: #000;
   box-shadow: 0 0 50px rgb(251, 184, 13);
   border-radius: 20px;
-  padding: 40px;
+  padding: 100px;
   overflow: hidden;
   transition: 1s ease-in-out;
 }
@@ -85,7 +85,16 @@ h2 {
   border: none;
   outline: none;
 }
-
+.input-group textarea {
+  width: 320px;
+  height: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 0 5px;
+  background: transparent;
+  border: none;
+  outline: none;
+}
 .input-group input:focus~label,
 .input-group input:valid~label {
   top: -5px;

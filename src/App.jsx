@@ -5,7 +5,7 @@ import Signup from './assets/Signup';
 import Login from './assets/signin';
 import Home from './assets/Home';
 import Navbar from './assets/Navbar';
-
+import  Feedback  from './assets/Feedback';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
@@ -17,6 +17,8 @@ function App() {
           <Route path='/register' element={<Signup isLoggedIn={isLoggedIn} />} />
           <Route path='/' element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
           <Route path='/home' element={isLoggedIn ? <Home /> : <Navigate to="/" />} />
+          <Route path='/feedback' element={  <Feedback />} />
+
         </Routes>
       </SnackbarProvider>
     </BrowserRouter>
