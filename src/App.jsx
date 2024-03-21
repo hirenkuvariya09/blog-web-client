@@ -20,9 +20,7 @@ function App() {
           <Route path='/home' element={ <Home />}/>
           {/* <Route path='/Blog' element={isLoggedIn ? <Blog /> : <Navigate to="/" />} /> */}
           <Route path='/Blog' element={<Blog />} />
-
           <Route path='/feedback' element={  <Feedback />} />
-
         </Routes>
       </SnackbarProvider>
     </BrowserRouter>
