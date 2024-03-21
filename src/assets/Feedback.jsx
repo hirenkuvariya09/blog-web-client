@@ -52,12 +52,12 @@ function Feedback() {
         <div className="screen">
           <div className="screen-body">
             
-            <div className="screen-body-item left">
+            <div className="screen-body-item">
               <div className="app-title">
-                <span>CONTACT US</span>
+                <span className='text-center'>FEEDBACK</span>
               </div>
-              <div className="app-contact">CONTACT INFO : +91 72288 06685</div>
-            </div>
+           
+           
             <div className="screen-body-item">
               <div className="app-form">
                 <form onSubmit={handleSubmit}>
@@ -103,13 +103,14 @@ function Feedback() {
                       onChange={(e) => setMessage(e.target.value)}
                       required
                     />
-                  </div>
+                  </div><br/>
                   <div className="app-form-group buttons">
                     {error && <p className="text-danger">{error}</p>}
                     <button type="submit" disabled={loading}>
-                      {loading ? 'Loading...' : 'Submit'}
+                      {loading ? 'Loading...' : 'Send'}
                     </button>
-                  </div>
+                  </div><br/><br/>
+                  <div className="app-contact text-center">CONTACT INFO : +91 72288 06685</div>
                 </form>
               </div>
             </div>
@@ -117,7 +118,9 @@ function Feedback() {
         </div>
       </div>
     </div>
+    </div>
+      
     </>
   );
 }
-export default Feedback;
+export default Feedback;
