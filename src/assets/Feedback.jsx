@@ -40,10 +40,18 @@ function Feedback() {
   };
 
   return (
+    <>
+    
     <div className="background">
+     
       <div className="container">
+      <div class="content" id='feedbackani'>
+        <h1>Feedback</h1>
+        <h1>Feedback</h1>
+       </div>
         <div className="screen">
           <div className="screen-body">
+            
             <div className="screen-body-item left">
               <div className="app-title">
                 <span>CONTACT US</span>
@@ -109,7 +117,7 @@ function Feedback() {
         </div>
       </div>
     </div>
+    </>
   );
 }
-
 export default Feedback;

@@ -35,10 +35,11 @@ function Login({ isLoggedIn, setIsLoggedIn }) {
 
     return (
         <div className="wrapper">
-           <h2>Sign-in</h2>
+            
             <div className="form-wrapper sign-in">
-               
+             
                 <form onSubmit={handleSubmit}>
+                <h2>Sign-in</h2>
                     <div className="input-group">
                         <input
                             type="text"
