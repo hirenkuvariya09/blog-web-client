@@ -17,8 +17,9 @@ function App() {
         <Routes>
           <Route path='/register' element={<Signup isLoggedIn={isLoggedIn} />} />
           <Route path='/' element={<Login isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />} />
-          <Route path='/home' element={isLoggedIn ? <Home /> : <Navigate to="/" />} />
-          <Route path='/Blog' element={isLoggedIn ? <Blog /> : <Navigate to="/" />} />
+          <Route path='/home' element={ <Home />}/>
+          {/* <Route path='/Blog' element={isLoggedIn ? <Blog /> : <Navigate to="/" />} /> */}
+          <Route path='/Blog' element={<Blog />} />
 
           <Route path='/feedback' element={  <Feedback />} />
 
