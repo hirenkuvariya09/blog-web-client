@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './Home.css';
 import BlogDetails from './BlogDetails';
-// import { useNavigate } from 'react-router-dom';
 
 function Blog() {
   const [blogs, setBlogs] = useState([]);
@@ -10,7 +9,7 @@ function Blog() {
   const [loading, setLoading] = useState(true);
   const [selectedBlog, setSelectedBlog] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [blogsPerPage] = useState(5); // Adjust this number as needed
+  const [blogsPerPage] = useState(5);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -48,11 +47,13 @@ function Blog() {
 
   return (
     <div>
-      <div className="content">
-        <h1>All Blogs</h1>
-        <h1>All Blogs</h1>
-      </div>
-   
+      {!selectedBlog && (
+        <div className="content">
+          <h1>All Blogs</h1>
+          <h1>All Blogs</h1>
+        </div>
+      )}
+
       {selectedBlog ? (
         <BlogDetails blog={selectedBlog} />
       ) : (
@@ -67,16 +68,18 @@ function Blog() {
           ))}
         </div>
       )}
-      <div className="pagination-container">
-      <ul className="pagination">
-        {Array.from({ length: Math.ceil(blogs.length / blogsPerPage) }, (_, i) => (
-          <li key={i} className={currentPage === i + 1 ? 'active' : ''}>
-            <button onClick={() => paginate(i + 1)}>{i + 1}</button>
-          </li>
-        ))}
-      </ul>
+      {!selectedBlog && (
+        <div className="pagination-container">
+          <ul className="pagination">
+            {Array.from({ length: Math.ceil(blogs.length / blogsPerPage) }, (_, i) => (
+              <li key={i} className={currentPage === i + 1 ? 'active' : ''}>
+                <button onClick={() => paginate(i + 1)}>{i + 1}</button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
     </div>
-  </div>
   );
 }
 
