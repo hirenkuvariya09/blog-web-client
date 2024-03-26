@@ -45,10 +45,7 @@ function Feedback() {
     <div className="background">
      
       <div className="container">
-      <div class="content" id='feedbackani'>
-        <h1>Feedback</h1>
-        <h1>Feedback</h1>
-       </div>
+      
         <div className="screen">
           <div className="screen-body">
             
