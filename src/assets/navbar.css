@@ -59,3 +59,18 @@ color: white;
 
 
 
+/* App.css */
+.app {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.dark {
+  --bg-color: #000000;
+  --text-color: #ffffff;
+}
+
+.light {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+}
