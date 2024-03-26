@@ -1,4 +1,6 @@
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -9,7 +11,8 @@ body {
   font-size: 12px;
 }
 
-body, button {
+body,
+button {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   letter-spacing: 1.4px;
@@ -47,7 +50,7 @@ body, button {
   display: flex;
   flex-direction: column;
   position: relative;
-  color: #fff;    
+  color: #fff;
   font-size: 26px;
 }
 
@@ -96,6 +99,6 @@ body, button {
   }
 
   .screen-body-item {
-    padding: 0;
-    }
-  }
+    padding: 0;
+  }
+}
